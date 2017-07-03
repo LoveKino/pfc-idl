@@ -1,0 +1,27 @@
+{
+  "name": "pfc-idl",
+  "version": "0.0.1",
+  "description": "A simple interface definition language.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoveKino/pfc-idl.git"
+  },
+  "keywords": [
+    "idl",
+    "function",
+    "interface"
+  ],
+  "author": "ddchen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LoveKino/pfc-idl/issues"
+  },
+  "homepage": "https://github.com/LoveKino/pfc-idl#readme",
+  "devDependencies": {
+    "mocha": "^3.4.2"
+  }
+}
