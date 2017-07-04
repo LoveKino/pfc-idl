@@ -162,4 +162,22 @@ describe('index', () => {
             }
         });
     });
+
+    it('default value:string', () => {
+        assert.deepStrictEqual(parse('f(A a, b={}) -> T'), {
+            'f': {
+                'params': [{
+                    type: 'A',
+                    name: 'a',
+                }, {
+                    name: 'b',
+                    def: {}
+                }],
+                'parser': {
+                    'type': 'T'
+                }
+            }
+        });
+    });
+
 });

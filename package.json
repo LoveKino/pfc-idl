@@ -1,6 +1,6 @@
 {
   "name": "pfc-idl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple interface definition language.",
   "main": "index.js",
   "scripts": {

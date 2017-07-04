@@ -99,25 +99,28 @@ let parseParams = (paramsStr) => {
 let parseParam = (paramStr) => {
     let parts = paramStr.split(' ');
     if (parts.length === 1) {
-        return {
-            name: parts[0]
-        };
+        return parseName(parts[0]);
     }
     let type = parts[0],
         rest = paramStr.substring(type.length).trim();
 
-    let defs = rest.split('=');
+    let result = parseName(rest);
+    result.type = type;
+    return result;
+};
+
+let parseName = (nameStr) => {
+    let defs = nameStr.split('=');
     if (defs.length === 1) {
         return {
-            type,
-            name: rest
+            name: nameStr
         };
     } else {
         let name = defs[0];
-        let def = rest.substring(name.length + 1);
+        let def = nameStr.substring(name.length + 1);
         return {
-            type,
-            def: parseDef(def), name: name.trim()
+            def: parseDef(def),
+            name: name.trim()
         };
     }
 };
